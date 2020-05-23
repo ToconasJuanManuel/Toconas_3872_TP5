@@ -1,0 +1,278 @@
+/* ESTILO GENERAL   */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* ESTILO PARA HR, barra horizontal  */
+hr {
+	background-color: white;
+	height: 5px;
+}
+
+	/* Se define el tamaño del contenedor body que contendra los demas elementos */
+	/* Se inserta una imagen de fondo que no se repetira (no repeat), cubrira todo el contenedor(cover) y que no se vera afectado por el scroll (fixed) */
+body {
+	width: 100%;
+	height: 1000px;
+	background-image: url("../img/fondo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* ESTILO PARA HEADER  */
+/* Se da un fondo a la cabecera y formato al texto del elemento titulo h1 */
+header {
+	background-image: url("../img/head.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header>h1 {
+	font-family: Bodoni;
+	line-height: 200px;
+	text-align: center;
+	color: white;
+	font-size: 3em;
+}
+
+/* ESTILO PARA NAV   */
+/* Se da un tamaño al nav para que abarque todo el ancho de su contenedor y una imagen de fondo  */
+/* Se da formato a ul para quitar puntos de lista y tambien a li para que el contenido del menu se vea centrado */
+/* Se quita el subrayado a los elementos a dandole valor none a text-decoration */
+/* Se da hover a los elementos a de nav para que al pasar el puntero por el menu sobresalga un color , ademas para que el cambio no sea brusco se uiliza transition */
+nav {
+	width: 100%;
+	height: 50px;
+	background-image: url("../img/nav.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+nav>ul {
+	list-style: none;
+	text-align: center;
+	margin: 0% auto;
+	padding: 1%;
+}
+
+nav li {
+	display: inline;
+	padding: 10px;
+	font-size: 2em;
+}
+
+nav li a {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background: #edbbe1;
+	transition: .4s;
+	margin: +3px;
+}
+/* ESTILO PARA SECTION   */
+/* Se define tamaño y formato del contenedor del contenido principal de la pagina, text-align center permite que todo contenido se ubique en el centro de la pagina  */
+/* Se da formato al elemento titulo h3 del section */
+/* Float se utiliza para que el elemento donde se aplique salga de su flujo normal para ubicarse en el sentido especificado */
+/* Overflow; scroll permite la aparicion de un scroll cuando el contenido supere el tamaño del contenedor */
+section {
+	overflow: scroll;
+	margin-top: 1%;
+	float: left;
+	height: 60%;
+	width: 72%;
+	margin-left: 1%;
+	margin-right: 1%;
+	background-color: #46b9b6;
+	text-align:center;
+}
+
+section>h3 {
+	font-size: 40px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 15px;
+	margin-left: 30px;
+	margin-right: 30px;
+	padding: 10px;
+	text-align: center;
+	color: #0000ff;
+	background: #0080ff;
+}
+
+/* ESTILO NOTICIAS  */
+/* Se define las reglas para el selector de clase noticias para el contenido pricipal del item 1 pagina 1 */
+/* Inline-block permite visualizar el contenido de forma horizontal */
+/* Se definen las reglas de estilo para cada elemento de los article */
+/* las reglas para el selector ID fecha permiten dar formato a la fecha de la noticia */
+
+.noticias {
+	margin-bottom:10px;
+	width: 180px;
+	height: 200px;
+	display: inline-block;
+	padding: 5px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.noticias  img {
+	width: 100%;
+	height: 100px;
+}
+
+#fecha {
+	text-align: center;
+	font-size: 1em;
+	background-color: #c0c0c0;
+}
+
+.noticias p {
+	text-align: center;
+	font-size: 1em;
+	background-color: grey;
+}
+
+/* ESTILO SECTION FIXTURE  */
+/* Se definen las reglas para el selector de clase tamañoCelda y a sus elementos internos */
+/* Estas reglas permiten dar formato a la tabla correspondiente a la pagina 2 del Item1 */
+
+.tamañoCelda {
+	border: blue 1px solid;
+	margin: 60px auto; /* centrar tabla */
+}
+
+.tamañoCelda td {
+	width: 60px;
+	padding: 8px;
+	
+}
+
+.tamañoCelda tr th{
+	text-align: center;
+}
+
+.tamañoCelda tr td{
+	text-align: center;
+}
+
+.tamañoCelda tr td img {
+	width: 50px; 
+	height: 50px; 
+}
+
+/* ESTILO EQUIPOS  */
+/* Se definen las reglas para el selector de clase equipos para los divs de la pagina3 del item1 */
+/* Se define un fondo con cierta transparencia que permite una mejor visibilidad del contenido, esto manipulando la opacidad del mismo con .2 al final del rgba */
+
+.equipos{
+	width: 90%;
+	height:160px;
+	margin: 20px auto;
+	padding: 18px;
+	background: rgba(1,1,1,.2);
+	text-align: center;
+}
+
+.equipos p{
+	text-align: justify;
+	padding: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.equipos img{
+	float:left;  /* Se hara flotar la imagen a la izquierda para su ubicacion correcta segun lo solicitado en la pagina3 Item1  */
+	width: 28%;
+	height: 158px;
+	margin-right: 10px;
+}
+
+
+/* ESTILO PARA ASIDE  */
+/* Se da un tamaño al aside y se hace flotar a la derecha para que que no se posicione debajo del section*/
+aside {
+	float: right;
+	width: 25%;
+	height: 600px;
+	background-color: #52adab;
+	margin-right: 1%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+aside>h3 {
+	height: 5px;
+	line-height: 5px;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%; padding : 10px;
+	text-align: center;
+	color: #0000ff;
+	background: #0080ff;
+	padding: 10px;
+}
+
+aside a img {
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-bottom: 10%;
+	width: 65%;
+	height: 95px;
+}
+
+aside a img:hover {
+	border: 3px solid blue;
+	transition:.3s;
+}
+
+/* ESTILO PARA FOOTER  */
+/* Se da tamaño y formato a los elementos del pie de pagina */
+/* La propiedad clear permite ubicar al pie de pagina en relacion a sus elementos cercanos si estos flotan, clear permite posicionarlo debajo de estos */
+footer {
+	width: 100%;
+	height: 180px;
+	padding: 1% px;
+	clear: both;
+	background-image: url("../img/foot.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 1%;
+}
+
+footer table{
+	margin: 0 auto;
+}
+
+footer  table  th {
+	color: white;
+	background: black;
+}
+
+footer  table  td {
+	width: 200px;
+}
+
+footer p {
+	background: black;
+	color: white;
+	text-align: center;
+}
+
+footer table tr td{
+	align-content: center;
+}
+footer table tr td a img{
+	width: 150px;
+	height: 100px;
+}
+
+footer table tr td a img:hover{
+	width:160px;
+	margin: -5px;
+	transition: .6s;
+}

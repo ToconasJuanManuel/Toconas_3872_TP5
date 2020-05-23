@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css" />
+</head>
+
+<!--  BODY -->
+
+<body>
+
+	<!--  HEADER -->
+	<!--  El header consiste solo en el titulo de la cabecera de la pagina usando un elemento titulo h1 -->
+	<header>
+		<h1>LIGA PROFESIONAL DE FUTBOL</h1>
+	</header>
+	<hr>
+
+
+	<!--  NAV -->
+	<!--  El menu de la pagina mostrara 3 elementos que enlasan con las demas paginas y con sigo misma; se considero no usar target="_black" en este menu para que no se abrieran pestañas adicionales-->
+	<nav>
+		<ul>
+			<li><a href="Index.html"> Home </a></li>
+			<li><a href="fixture.html"> Fixture y resultados </a></li>
+			<li><a href="equipos.html"> Equipos </a></li>
+		</ul>
+		
+		<div>
+			<h4 th:text = " 'Bienvenido!' + ${usuario} "></h4>
+		</div>
+		
+	</nav>
+	<hr>
+
+	<!--  CONTENIDO -->
+	<!--  Las noticias seran articles que usaran la clase noticias y encerarran una imagen e informacion de fecha y noticias -->
+	<!--  Las imagenes abrirar en otra pestaña la pagina de donde se extrajo la informacion usando blank, alt permite visualizar cierto mensaje si la imagen no esta disponible -->
+	<section>
+		<h3>Noticias</h3>
+
+		<article class="noticias">
+			<div>
+				<a
+					href="https://www.tycsports.com/seleccion-argentina/federico-fernandez-en-algunas-charlas-de-sabella-terminaba-llorando-se-te-caian-las-lagrimas-20200506.html"
+					target="_blank"> <img src="img/not1.jpg" alt="no es visible" /></a>
+				<p id="fecha">12-3-20</p>
+				<p>En algunas charlas de Sabella terminaba llorando, se te caían
+					las lágrimas</p>
+			</div>
+		</article>
+
+
+		<div class="noticias">
+			<a
+				href="https://www.tycsports.com/libero/abel-balbo-y-el-boicot-a-la-seleccion-argentina-en-el-mundial-de-estados-unidos-20200506.html"
+				target="_blank"> <img src="img/not2.jpg" alt="no es visible" /></a>
+			<p id="fecha">13-3-20</p>
+			<p>Abel Balbo y el boicot a la Selección Argentina en el Mundial
+				de Estados Unidos</p>
+		</div>
+
+		<div class="noticias">
+			<a
+				href="https://www.tycsports.com/interes-general/clubes-jujenos-pediran-que-sus-planteles-vuelvan-a-los-entrenamientos-20200506.html"
+				target="_blank"> <img src="img/not3.jpg" alt="no es visible" /></a>
+			<p id="fecha">20-3-20</p>
+			<p>Clubes jujeños pedirán que sus planteles vuelvan a los
+				entrenamientos</p>
+		</div>
+
+		<div class="noticias">
+			<a
+				href="https://www.tycsports.com/independiente/maxi-meza-la-situacion-de-independiente-es-lamentable-apoyo-a-los-jugadores-20200508.html"
+				target="_blank"> <img src="img/not4.jpg" alt="no es visible" /></a>
+			<p id="fecha">8-5-20</p>
+			<p>Independiente: lamentable situacion en apoyo a los jugadores</p>
+		</div>
+
+		<div class="noticias">
+			<a
+				href="https://www.tycsports.com/la-liga/messi-volvio-a-las-practicas-en-barcelona-tras-la-suspension-por-coronavirus-20200508.html"
+				target="_blank"> <img src="img/not5.jpg" alt="no es visible" /></a>
+			<p id="fecha">8-5-20</p>
+			<p>Messi volvió a las prácticas en Barcelona tras la suspensión
+				por coronavirus</p>
+		</div>
+
+		<div class="noticias">
+			<a
+				href="https://www.tycsports.com/la-liga/la-fifa-autoriza-convocar-23-jugadores-y-realizar-cinco-cambios-20200508.html"
+				target="_blank"> <img src="img/not6.jpg" alt="no es visible" /></a>
+			<p id="fecha">8-5-20</p>
+			<p>La FIFA autoriza convocar 23 jugadores y realizar cinco
+				cambios</p>
+		</div>
+
+
+	</section>
+
+	<!--  ASIDE -->
+	<!--  Columna lateral derecha que contiene un elemento titulo h3 e imagenes que enlazan los sitios webs simulando publicidad  -->
+
+	<aside>
+		<h3>Auspiciantes</h3>
+		<a href="http://www.adidas.com.ar/" target="_blank"> <img
+			src="img/adi.jpg" alt="no es visible" /></a> <br> <a
+			href="https://www.macro.com.ar/" target="_blank"> <img
+			src="img/banc.png" alt="no es visible" /></a> <br> <a
+			href="https://www.chevrolet.com.ar/" target="_blank"> <img
+			src="img/chev.jpg" alt="no es visible" /></a> <br> <a
+			href="https://www.fravega.com/" target="_blank"> <img
+			src="img/frav.jpg" alt="no es visible" /></a>
+	</aside>
+
+
+	<!--  FOOTER -->
+	<!--  Pie de pagina que contiene una tabla  con 4 titulos y 4 imagenes correspondientes que enlazan a redes sociales simulando contactos, tambien se agrega informacin de contacto mendiate parrafos -->
+	<footer>
+		<table>
+			<tr>
+				<th>Facebook</th>
+				<th>Twitter</th>
+				<th>Instagram</th>
+				<th>Tumbler</th>
+			</tr>
+
+			<tr>
+				<!-- defino fila !-->
+				<td><a href="https://www.facebook.com/" target="_blank"> <img
+						src="img/fb.png" alt="no es visible" width="150px" height="100px" /></a></td>
+
+				<!-- defino celdas normales !-->
+				<td><a href="https://twitter.com" target="_black"> <img
+						src="img/tw.png" alt="no es visible" /></a></td>
+
+				<!-- defino celdas normales !-->
+				<td><a href="https://www.instagram.com" target="_black"> <img
+						src="img/in.png" alt="no es visible" /></a></td>
+
+				<!-- defino celdas normales !-->
+				<td><a href="https://www.tumblr.com/" target="_black"> <img
+						src="img/tb.png" alt="no es visible" /></a></td>
+			</tr>
+		</table>
+		<br>
+		<p>Avda. Pedro Ortiz de Zarate N° 455 - Tel 388 4789555</p>
+	</footer>
+
+
+</body>
+</html>
