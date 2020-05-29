@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>index</title>
-	<link rel="stylesheet" type="text/css" href="../css/estilos.css" />
+	<!-- th:href="@{/css/estilos.css} se ingresa para que se reconozca el css-->
+	<link rel="stylesheet" type="text/css" href="../static/css/estilos.css" th:href="@{/css/estilos.css}">
 </head>
 
 <!--  BODY -->
@@ -26,10 +27,10 @@
 			<li><a href="fixture.html"> Fixture y resultados </a></li>
 			<li><a href="equipos.html"> Equipos </a></li>
 		</ul>
-		
-		<div>
+		<div class="welcome">
 			<h4 th:text = " 'Bienvenido!' + ${usuario} "></h4>
 		</div>
+		
 		
 	</nav>
 	<hr>

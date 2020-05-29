@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html>
+
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>fixture</title>
-<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+
+<!-- th:href="@{/css/estilos.css} se ingresa para que se reconozca el css-->
+<link rel="stylesheet" type="text/css" href="../static/css/estilos.css"
+	th:href="@{/css/estilos.css}">
 </head>
 
 <!--  BODY -->
@@ -26,6 +30,11 @@
 			<li><a href="fixture.html"> Fixture y resultados </a></li>
 			<li><a href="equipos.html"> Equipos </a></li>
 		</ul>
+		
+		<div class="welcome">
+			<h4 th:text = " 'Bienvenido!' + ${usuario} "></h4>
+		</div>
+		
 	</nav>
 	<hr>
 
@@ -91,7 +100,7 @@
 
 	<!--  FOOTER -->
 	<footer>
-		<table >
+		<table>
 			<tr>
 				<th>Facebook</th>
 				<th>Twitter</th>
@@ -114,7 +123,7 @@
 
 				<!-- defino celdas normales !-->
 				<td><a href="https://www.tumblr.com/" target="_black"> <img
-						src="img/tb.png" alt="no es visible"  /></a></td>
+						src="img/tb.png" alt="no es visible" /></a></td>
 			</tr>
 		</table>
 		<br>

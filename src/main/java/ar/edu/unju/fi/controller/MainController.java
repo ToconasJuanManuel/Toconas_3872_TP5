@@ -15,7 +15,6 @@ public class MainController {
 	@RequestMapping("/")
 	public String main(Model model) {
 		model.addAttribute("usuario",usuarioService.mostrar().getNombre());
-		return "index";
+		return "Index";
 	}
-	
 }

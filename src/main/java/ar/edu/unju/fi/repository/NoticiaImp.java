@@ -6,47 +6,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import ar.edu.unju.fi.Toconas3872Tp5Application;
-import ar.edu.unju.fi.model.Usuario;
+import ar.edu.unju.fi.model.Noticia;
 
-@Repository("usuarioImp")
-public class UsuarioImp implements IUsuario {
+@Repository("noticiaImp")
+public class NoticiaImp implements INoticia {
 
 	@Autowired
-	private Usuario usuario;
-	
+	private Noticia noticia;
+
 	//El nombre Toconas3872Tp5Application.class se obtiene de la aplicacion del paquete fi
 	public static Logger LOG = LoggerFactory.getLogger(Toconas3872Tp5Application.class);
-	
+
 	@Override
 	public void guardar() {
 		// accion ejecutada para guardar un objeto usuario en la BD
 		LOG.info("-------------------------------------------------------------");
-		LOG.info("El usuario guardado fue " + usuario.getApellido() + ",  " + usuario.getNombre());
-		LOG.info("ID: " + usuario.getId()+ " DNI:  " + usuario.getDni());
-		LOG.info("Fecha de nacimiento: " + usuario.getFechaNacimiento() + " Direccion:  " + usuario.getDireccion());
-		LOG.info("Fecha de alta: " + usuario.getFechaAlta()+ " Tipo de socio:  " + usuario.getTipo() + " Contraseña: " + usuario.getPassword());
+		LOG.info("La noticia fue guardada | " + noticia.getTitulo() + " | fecha : "+ noticia.getFecha());
+		LOG.info("Su resumen indica | " + noticia.getResumen());
 		LOG.info("-------------------------------------------------------------");
 
 	}
 
 	@Override
-	public Usuario mostrar() {
-		// se recuperan los datos del usuario
-		return usuario;
+	public Noticia mostrar() {
+		//System.out.println("Se muestran los datos de la noticia");
+		return noticia;
 	}
 
 	@Override
 	public void eliminar() {
-		// Se elimina el objeto usuario de la BD
-		LOG.info("Se elimino el usuario de la BD");
+		// Se elimina el objeto noticia de la BD
+		LOG.info("Se elimino la noticia de la BD");
 	}
 
 	@Override
-	public Usuario modificar() {
+	public Noticia modificar() {
 		// Se modifican los datos del usuario en la BD
-		LOG.info("Se han modificaco los datos del usuario");
+		LOG.info("Se han modificaco los datos de la noticia");
 		LOG.info("Sus nuevos datos se mostraran a continuacion");
-		return usuario;
+		return noticia;
 	}
 
 }
