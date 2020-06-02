@@ -4,6 +4,11 @@ import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
 
+/**
+ * La clase Noticia se identifica como Bean al usar @component de forma que sera
+ * administrata por el contenedor de Spring
+ */
+
 @Component
 public class Noticia {
 	//ATRIBUTOS

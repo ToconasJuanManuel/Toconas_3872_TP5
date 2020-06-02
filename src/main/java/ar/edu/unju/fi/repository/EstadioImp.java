@@ -1,4 +1,11 @@
 package ar.edu.unju.fi.repository;
+/**
+ * Clase que implementa todo lo definido en la interfaz IEstadio
+ * Aqui se definidira el codigo de cada metodo de la interfaz
+ * La anotacion repository es derivada de component, que se usa en la capa
+ * de acceso en la base de datos para permitir a Spring crear las instancias
+ * de los objetos de esta clase
+ */
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +18,10 @@ import ar.edu.unju.fi.model.Estadio;
 @Repository("estadioImp")
 public class EstadioImp implements IEstadio {
 
+	/**
+	 * Se inyecta el objeto estadio para minimizar el acoplamiento
+	 * De esta manera el main no necesitara la instancia de esta sino que solo se buscara cuando sea necesaria
+	 */
 	@Autowired
 	private Estadio estadio;
 

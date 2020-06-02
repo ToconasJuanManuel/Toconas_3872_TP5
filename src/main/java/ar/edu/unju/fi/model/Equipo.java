@@ -3,6 +3,10 @@ package ar.edu.unju.fi.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * La clase Equipo se identifica como Bean al usar @component de forma que sera
+ * administrata por el contenedor de Spring
+ */
 @Component
 public class Equipo {
 	

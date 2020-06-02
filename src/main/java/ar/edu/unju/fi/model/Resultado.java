@@ -5,6 +5,10 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * La clase Resultado se identifica como Bean al usar @component de forma que sera
+ * administrata por el contenedor de Spring
+ */
 @Component
 public class Resultado {
 	//ATRIBUTOS

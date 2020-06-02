@@ -5,6 +5,11 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * La clase Cuota se identifica como Bean al usar @component de forma que sera
+ * administrata por el contenedor de Spring, puede opcionalmente entre parentesis
+ * llevar un identificador para usarlo dentro del contenedor de Spring ("cuota")
+ */
 @Component
 public class Cuota {
 	//ATRIBUTOS
@@ -32,6 +37,13 @@ public class Cuota {
 	 * Variable de tipo Usuario que representa los datos del dueño de la cuenta
 	 */
 	@Autowired
+	/**
+	 *  Autoinyecccion de la clase usuario,
+	 *  Busca un objeto manejado (bean) que implementen determinada 
+	 *  interfaz para hacer referencia a él. 
+	 *  De esta manera no es neceario crear una instancia nueva del objeto 
+	 *  cada vez que se necesite la funcionalidad de determinada clase 
+	 */
 	private Usuario usuario ;
 
 	//CONSTRUCTORES
